@@ -1,0 +1,474 @@
+{
+	"info": {
+		"_postman_id": "700ec854-3c6d-487a-9bd7-e01a2128307d",
+		"name": "GMT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Employer",
+			"item": [
+				{
+					"name": "New Employer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"jonathan@goldmediatech.com\",\n\t\"password\": \"theone\",\n\t\"skills\": [\n\t\t\"C++\",\n\t\t\"C\",\n\t\t\"Javascript\",\n\t\t\"Mongo\"\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/employer",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Employer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"jonathan@goldmediatech.com\",\n\t\"password\": \"theone\",\n\t\"skills\": [\n\t\t\"C++\",\n\t\t\"C\",\n\t\t\"Javascript\",\n\t\t\"Mongo\"\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/employer",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employer"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18-k0g2Vkb6U2C3lK5CUAAqK6+PXb8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 May 2019 03:47:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "5cdcdd3bc73edc5c2c9f2bd2"
+						},
+						{
+							"name": "New Employer With Existing Email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"jonathan@goldmediatech.com\",\n\t\"password\": \"theone\",\n\t\"skills\": [\n\t\t\"C++\",\n\t\t\"C\",\n\t\t\"Javascript\",\n\t\t\"Mongo\"\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/employer",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employer"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18-H9VPRSPaeVzAywxrK9Dm4kj9U/c\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 May 2019 06:35:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Employer already exists!"
+						}
+					]
+				},
+				{
+					"name": "Employer Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"jonathan@goldmediatech.com\",\n\t\"password\": \"theone\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/employer/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"employer",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Employer Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"jonathan@goldmediatech.com\",\n\t\"password\": \"theone\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/employer/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employer",
+										"login"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "152"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"98-G2eU+5SSZLfL2R81/q8vRU2SPL4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 May 2019 04:55:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyaWdodHMiOlsicmVndWxhci11c2VyIl0sImlhdCI6MTU1Nzk4MjU1OH0.uGVja0EEQJHdqT9qK1CMAMDdk07x-qHZ-yBJ71vQtIs\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Developer",
+			"item": [
+				{
+					"name": "New Developer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"other@goldmediatech.com\",\n\t\"skills\": [\n\t\t\"C++\",\n\t\t\"C\",\n\t\t\"Javascript\",\n\t\t\"Loopback\"\n\t]\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/developer",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"developer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Developer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"other@goldmediatech.com\",\n\t\"skills\": [\n\t\t\"C++\",\n\t\t\"C\",\n\t\t\"Javascript\",\n\t\t\"Loopback\"\n\t]\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/developer",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"developer"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18-eeo+gY3U7Ko2bGPS6YLk0qnOfkE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 May 2019 03:45:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "5cdcdcecc73edc5c2c9f2bd1"
+						}
+					]
+				},
+				{
+					"name": "Get Developers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Y2RjZTVjNDQ4MWJiMTVkMTkwNjZhMDUiLCJyaWdodHMiOlsicmVndWxhci11c2VyIl0sImlhdCI6MTU1Nzk4NDYzMiwiZXhwIjoxNTU3OTg4MjMyfQ.gEXbbAD70VOsTL2su2w2azcOkpid1NYeYZUB0XN7qdg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/developer",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"developer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Developers With Expired Token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}/developer",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"developer"
+									]
+								}
+							},
+							"status": "Gone",
+							"code": 410,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "21"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15-uGSfPg7CyjzfKfN6Lhi8LR1uuE4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 May 2019 05:28:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "Token expired. Renew."
+						},
+						{
+							"name": "Get Developers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}/developer",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"developer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "115"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"73-b98ZrH7VqKpuN0p5sN8CqhCmgRA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 May 2019 05:40:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"5cdcdcecc73edc5c2c9f2bd1\",\n        \"email\": \"other@goldmediatech.com\",\n        \"skills\": [\n            \"C++\",\n            \"C\",\n            \"Javascript\",\n            \"Loopback\"\n        ]\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
